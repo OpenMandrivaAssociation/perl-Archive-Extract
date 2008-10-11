@@ -3,8 +3,8 @@
 
 Summary:	A generic archive extracting mechanism
 Name:		perl-%{module}
-Version:	0.26
-Release:	%mkrel 2
+Version:	0.28
+Release:	%mkrel 1
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
