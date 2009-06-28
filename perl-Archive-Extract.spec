@@ -3,7 +3,7 @@
 
 Summary:	A generic archive extracting mechanism
 Name:		perl-%{module}
-Version:	0.32
+Version:	0.34
 Release:	%mkrel 1
 License:	Artistic/GPL
 Group:		Development/Perl
