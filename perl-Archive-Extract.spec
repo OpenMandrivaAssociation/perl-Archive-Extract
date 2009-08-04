@@ -1,20 +1,24 @@
-%define	module	Archive-Extract
-%define	modprefix Archive
+%define	upstream_name	 Archive-Extract
+%define	upstream_version 0.34
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	A generic archive extracting mechanism
-Name:		perl-%{module}
-Version:	0.34
-Release:	%mkrel 1
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Archive/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
 %endif
+BuildRequires:	perl(IPC::Cmd)                  >= 0.360.0
+BuildRequires:  perl(Module::Load::Conditional) >= 0.40.0
+BuildRequires:  perl-version
 BuildArch:	noarch
-BuildRequires:	perl(IPC::Cmd) >= 0.36 perl(Module::Load::Conditional) >= 0.04 perl-version
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Archive::Extract is a generic archive extraction mechanism.
@@ -25,7 +29,7 @@ different interfaces for each type by using either perl modules, or commandline
 tools on your system.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -45,5 +49,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc README CHANGES
-%{perl_vendorlib}/%{modprefix}/*
+%{perl_vendorlib}/Archive/*
 %{_mandir}/*/*
