@@ -1,19 +1,19 @@
-%define	upstream_name	 Archive-Extract
-%define upstream_version 0.60
+%define	modname	Archive-Extract
+%define	modver	0.60
 
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Name:		perl-%{modname}
+Version:	%{perl_convert_version %{modver}}
 Release:	1
 
 Summary:	A generic archive extracting mechanism
 License:	Artistic/GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Archive/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{modname}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Archive/%{modname}-%{modver}.tar.gz
 
 BuildRequires:	perl-devel
-BuildRequires:	perl(IPC::Cmd)                  >= 0.360.0
-BuildRequires:	perl(Module::Load::Conditional) >= 0.40.0
+BuildRequires:	perl(IPC::Cmd)			>= 0.360.0
+BuildRequires:	perl(Module::Load::Conditional)	>= 0.40.0
 BuildRequires:	perl-version
 BuildArch:	noarch
 
@@ -26,14 +26,14 @@ different interfaces for each type by using either perl modules, or commandline
 tools on your system.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-%__make test
+make test
 
 %install
 %makeinstall_std
@@ -43,9 +43,9 @@ tools on your system.
 %{perl_vendorlib}/Archive/*
 %{_mandir}/*/*
 
-
 %changelog
 * Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.600.0-1
+- cleanups
 - new version
 
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.520.0-4mdv2012.0
