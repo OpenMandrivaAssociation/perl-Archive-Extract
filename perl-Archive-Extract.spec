@@ -1,9 +1,9 @@
 %define	upstream_name	 Archive-Extract
-%define upstream_version 0.52
+%define upstream_version 0.60
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 
 Summary:	A generic archive extracting mechanism
 License:	Artistic/GPL
@@ -45,6 +45,9 @@ tools on your system.
 
 
 %changelog
+* Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.600.0-1
+- new version
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.520.0-4mdv2012.0
 + Revision: 765053
 - rebuilt for perl-5.14.2
