@@ -15,6 +15,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(IPC::Cmd)			>= 0.360.0
 BuildRequires:	perl(Module::Load::Conditional)	>= 0.40.0
 BuildRequires:	perl-version
+BuildRequires:	perl-JSON-PP
 BuildArch:	noarch
 
 %description
