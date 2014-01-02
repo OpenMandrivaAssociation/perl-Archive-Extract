@@ -1,14 +1,14 @@
 %define	modname	Archive-Extract
-%define	modver	0.60
+%define modver 0.68
 
 Summary:	A generic archive extracting mechanism
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	7
+Version:	%perl_convert_version %{modver}
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Archive/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Archive/Archive-Extract-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(IPC::Cmd) >= 0.360.0
@@ -41,4 +41,5 @@ make test
 %doc README CHANGES
 %{perl_vendorlib}/Archive/*
 %{_mandir}/man3/*
+
 
