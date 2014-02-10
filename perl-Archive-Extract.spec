@@ -1,5 +1,5 @@
 %define	modname	Archive-Extract
-%define modver 0.70
+%define modver 0.72
 
 Summary:	A generic archive extracting mechanism
 Name:		perl-%{modname}
@@ -41,5 +41,6 @@ make test
 %doc README CHANGES
 %{perl_vendorlib}/Archive/*
 %{_mandir}/man3/*
+
 
 
