@@ -2,5 +2,6 @@ removed_sources:
   Archive-Extract-0.52.tar.gz: 11539f5e665c0e786fa55c7605abc1312cf0803b
   Archive-Extract-0.68.tar.gz: f4e02894b99aa9a2159c569ade2b8a8014a38461
   Archive-Extract-0.70.tar.gz: 58347fdfbe181915443a5106b5e8ec4d5e5b2f60
-sources:
   Archive-Extract-0.72.tar.gz: 7e8520c0fe192aa06b3d9c8831d2736c6316a995
+sources:
+  Archive-Extract-0.74.tar.gz: 54f24360baf4852fdc1850a1a88c7fbb6b1b858b
